@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<input type="text"
+       class="search"
+       placeholder="Search username..."
+       data-ng-model="searchCtrl.userName">
+<button class="buttonSearch"
+        data-ng-click="searchCtrl.displayUserDetails()">Search</button>
 
-</body>
-</html>
+<content
+        name="searchCtrl.name"
+        details="searchCtrl.details"></content>

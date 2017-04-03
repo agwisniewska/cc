@@ -1,0 +1,14 @@
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+@import "components/content/content";
+@import "components/search/search";
+
+@mixin centerer {
+  position: absolute;
+  top: 85%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

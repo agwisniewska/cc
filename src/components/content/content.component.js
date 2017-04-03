@@ -1,3 +1,8 @@
-/**
- * Created by agata on 01.04.2017.
- */
+export const Content =  {
+    templateUrl: '/views/content/content.html',
+    controller: 'ContentController',
+    bindings: {
+        details: '<',
+        name: '<'
+    }
+};

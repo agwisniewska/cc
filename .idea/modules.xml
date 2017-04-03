@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/cc-rekrutacja.iml" filepath="$PROJECT_DIR$/.idea/cc-rekrutacja.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ccrekrutacja/.idea/cc-rekrutacja.iml" filepath="$PROJECT_DIR$/../ccrekrutacja/.idea/cc-rekrutacja.iml" />
     </modules>
   </component>
 </project>

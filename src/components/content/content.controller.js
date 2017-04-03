@@ -1,3 +1,10 @@
-/**
- * Created by agata on 01.04.2017.
- */
+export class ContentController {
+
+    constructor() {}
+
+
+
+}
+
+
+
