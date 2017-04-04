@@ -1,12 +1,65 @@
 .search {
-  width: 35%;
-  height: 25px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 2px 2px 25px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 2px 2px 25px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 2px 2px 25px 0px rgba(50, 50, 50, 0.75);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 50px;
+
+  & .userInput {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #BEBEBE;
+    padding: 7px;
+    height: 34px;
+    margin: 0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    width: 100%;
+    min-width: 75px;
+    display: table-cell;
+    -webkit-box-shadow: inset 0 0 10px #000;
+    -moz-box-shadow: inset 0 0 10px #000;
+    box-shadow: inset 0 0 2px lightgrey;
+    background: transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    &::-webkit-input-placeholder {
+      font-size: 12px;
+      line-height: 3;
+      color: #BFC0C3;
+    }
+  }
+
+  & .buttonSearch {
+    padding: 7px 15px 7px 15px;
+    margin-left: 15px;
+    height: 34px;
+    border: 1px solid #BEBEBE;
+    background: #fbfbfb;
+    background: -webkit-linear-gradient(#fbfbfb, #EEEEEE);
+    background: -o-linear-gradient(#fbfbfb, #EEEEEE);
+    background: -moz-linear-gradient(#fbfbfb, #EEEEEE);
+    background: linear-gradient(#fbfbfb, #EEEEEE);
+    border-radius: 5px;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    &:hover {
+      background: #EEEEEE;
+      background: -webkit-linear-gradient(#EEEEEE, #fbfbfb);
+      background: -o-linear-gradient(#EEEEEE, #fbfbfb);
+      background: -moz-linear-gradient(#EEEEEE, #fbfbfb);
+      background: linear-gradient(#EEEEEE, #fbfbfb);
+    }
+
+  }
 
 }
 
 
-.buttonSearch {
-  width: 80px;
-  height: 30px;
-  color: #d3d3d3;
-}

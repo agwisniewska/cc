@@ -22,7 +22,7 @@ export class SearchController {
             vm.searchService.getUserRepossitories(response.data.login).then(response => {
                 vm.details.repos = response.data
             });
-            vm.error = "";
+            vm.details.error = "";
             // return vm.details;
         }).catch(error => {
             vm.details = {
@@ -31,7 +31,7 @@ export class SearchController {
                 name: "",
                 bio: "",
                 avatar_url: "",
-                error: "Doesn't exit"
+                error: "Does not exist"
             };
         })
     };

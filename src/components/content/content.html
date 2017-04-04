@@ -1,25 +1,41 @@
-<div class="details">
-    <div class="userDetails" ng-if="$ctrl.details.login != ''">
-        <div>
-            <img src={{$ctrl.details.avatar_url}}>
-            <p> {{'@' + $ctrl.details.login}} </p>
-            <h1> {{$ctrl.details.name}} </h1>
-            <p> {{$ctrl.details.bio}} </p>
+<div class="userDetails"
+     ng-if="$ctrl.details.login != ''">
+    <div class="row userInfo">
+        <div class="col-2 userImage">
+            <img class="image"
+                 src={{$ctrl.details.avatar_url}}>
+        </div>
+        <div class="col-10">
+            <div class="userData">
+                <p class="userLogin"> {{'@' + $ctrl.details.login}} </p>
+                <h1 class="userName"> {{$ctrl.details.name}} </h1>
+                <p class="userBio"> {{$ctrl.details.bio}} </p>
 
+            </div>
         </div>
     </div>
-    <div class="">{{ $ctrl.details.error }}</div>
-    <div class="userRepos"
-         ng-if="$ctrl.details.repos.length > 0 ">
-        <h2> Repositories </h2>
-        <hr>
-        <div class="repoDetails"
+    <div class="userRepos">
+        <h2 class="repoTitle"
+            ng-if="$ctrl.details.repos.length > 0 "> Repositories </h2>
+        <div class="row repoDetails"
              data-ng-repeat="repo in $ctrl.details.repos">
-            <h3> {{ repo.name }}
+            <div class="col-10"><h3> {{ repo.name }} </h3></div>
+            <div class="col-2 repoIcons">
+                <i class="fa fa-star star-font" aria-hidden="true"> {{repo.stargazers_count}} </i>
                 <i class="fa fa-code-fork fork-font" aria-hidden="true"> {{repo.forks_count}} </i>
-                <i class="fa fa-star star-font" aria-hidden="true"> {{repo.stargazers_count}} </i></h3>
-
+            </div>
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-12">
+        <div class="error"
+             ng-if="$ctrl.details.error != ''">{{ $ctrl.details.error }}
+        </div>
+    </div>
+</div>
+
+
+
+
 
