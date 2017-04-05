@@ -8,13 +8,13 @@ h1 {
   font-weight: 900;
 }
 
-.userInfo {
+.user-info {
   margin: 15px 0;
-  & .userData {
+  & .user-data {
     padding: 0 0 10px 15px;
-    & > .userLogin,
-    & > .userName,
-    & > .userBio {
+    & > .user-login,
+    & > .user-name,
+    & > .user-bio {
       margin: 0;
     }
   }
@@ -31,7 +31,7 @@ h1 {
 
 }
 
-.repoTitle {
+.repo-title {
   font-size: 20px;
   font-weight: bold;
   border-bottom: 3px solid #777777;
@@ -39,16 +39,17 @@ h1 {
   margin-bottom: 0;
 }
 
-.repoDetails {
+.repo-details {
   border-bottom: 1px solid #D3D3D3;
   padding: 0 15px;
 }
 
-.repoDetails h3 {
+.repo-details h3 {
   margin: 16px 0;
 }
 
-.repoIcons {
+.repo-icons {
   margin: 18.5px 0;
+  text-align: right;
 }
 

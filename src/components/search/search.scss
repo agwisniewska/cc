@@ -5,9 +5,9 @@
   box-shadow: 2px 2px 25px 0px rgba(50, 50, 50, 0.75);
   padding: 25px;
   border-radius: 15px;
-  margin-top: 50px;
+  margin: 50px 0;
 
-  & .userInput {
+  & .user-input {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -36,10 +36,12 @@
     }
   }
 
-  & .buttonSearch {
+  & .button-search {
     padding: 7px 15px 7px 15px;
     margin-left: 15px;
     height: 34px;
+    min-width: 50px;
+    width: 90%;
     border: 1px solid #BEBEBE;
     background: #fbfbfb;
     background: -webkit-linear-gradient(#fbfbfb, #EEEEEE);
@@ -57,9 +59,7 @@
       background: -moz-linear-gradient(#EEEEEE, #fbfbfb);
       background: linear-gradient(#EEEEEE, #fbfbfb);
     }
-
   }
-
 }
 
 

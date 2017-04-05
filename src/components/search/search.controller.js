@@ -5,34 +5,19 @@ export class SearchController {
         var vm = this;
         vm.searchService = SearchService;
         vm.userName = '';
-        vm.details = {
-            repos: [],
-            login: "",
-            name: "",
-            bio: "",
-            avatar_url: "",
-            error: ""
+        vm.details =  vm.getDetails();
 
-        };
-        vm.displayUserDetails = () => this.searchService.getUserDetails(vm.userName).then((response) => {
-            vm.details.login = response.data.login;
-            vm.details.name = response.data.name;
-            vm.details.bio = response.data.bio;
-            vm.details.avatar_url = response.data.avatar_url;
-            vm.searchService.getUserRepossitories(response.data.login).then(response => {
-                vm.details.repos = response.data
-            });
-            vm.details.error = "";
-            // return vm.details;
+        vm.displayUserDetails = () => this.searchService.getUserDetails(vm.userName).then((response, error) => {
+            let data = response.data;
+            let details = vm.getDetails("", [], data.login, data.name, data.bio, data.avatar_url);
+            vm.searchService.getUserRepossitories(data.login).then(response => details.repos = response.data);
+            vm.details = details;
         }).catch(error => {
-            vm.details = {
-                repos: [],
-                login: "",
-                name: "",
-                bio: "",
-                avatar_url: "",
-                error: "Does not exist"
-            };
+           vm.details = vm.getDetails('Does not exist')
         })
+    };
+
+    getDetails(error = '', repos = [], login = '', name = '', bio = '', avatar_url = '') {
+        return {repos: repos, login: login, name: name, bio: bio, avatar_url: avatar_url, error: error}
     };
 }
