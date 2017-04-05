@@ -1,5 +1,7 @@
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
+@import 'mixins';
 @import "components/content/content";
 @import "components/search/search";
 
@@ -127,7 +129,6 @@ body {
 }
 
 @media only screen and (min-width: 700px) {
-
   .col-m-0 {
     width: 0;
   }

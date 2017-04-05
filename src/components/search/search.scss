@@ -1,65 +1,47 @@
 .search {
-  background-color: #FFFFFF;
-  -webkit-box-shadow: 2px 2px 25px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 2px 2px 25px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 2px 2px 25px 0px rgba(50, 50, 50, 0.75);
-  padding: 25px;
-  border-radius: 15px;
   margin: 50px 0;
+  padding: 25px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
 
   & .user-input {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    border: 1px solid #BEBEBE;
-    padding: 7px;
+    @include borderBox(border-box);
+    @include boxShadow(inset 0 0 2px lightgrey);
+
     height: 34px;
-    margin: 0px;
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    outline: none;
     width: 100%;
     min-width: 75px;
-    display: table-cell;
-    -webkit-box-shadow: inset 0 0 10px #000;
-    -moz-box-shadow: inset 0 0 10px #000;
-    box-shadow: inset 0 0 2px lightgrey;
+    margin: 0px;
+    padding: 7px;
     background: transparent;
+    border: 1px solid #BEBEBE;
     border-radius: 5px;
     font-weight: bold;
     &::-webkit-input-placeholder {
-      font-size: 12px;
       line-height: 3;
       color: #BFC0C3;
+      font-size: 12px;
     }
   }
 
   & .button-search {
+    @include linearGradient(#fbfbfb, #EEEEEE);
+    height: 34px;
+    width: 90%;
+    min-width: 50px;
     padding: 7px 15px 7px 15px;
     margin-left: 15px;
-    height: 34px;
-    min-width: 50px;
-    width: 90%;
     border: 1px solid #BEBEBE;
-    background: #fbfbfb;
-    background: -webkit-linear-gradient(#fbfbfb, #EEEEEE);
-    background: -o-linear-gradient(#fbfbfb, #EEEEEE);
-    background: -moz-linear-gradient(#fbfbfb, #EEEEEE);
-    background: linear-gradient(#fbfbfb, #EEEEEE);
     border-radius: 5px;
-    font-size: 12px;
     color: black;
+    font-size: 12px;
     font-weight: bold;
     &:hover {
-      background: #EEEEEE;
-      background: -webkit-linear-gradient(#EEEEEE, #fbfbfb);
-      background: -o-linear-gradient(#EEEEEE, #fbfbfb);
-      background: -moz-linear-gradient(#EEEEEE, #fbfbfb);
-      background: linear-gradient(#EEEEEE, #fbfbfb);
+      @include linearGradient(#EEEEEE, #fbfbfb)
     }
   }
 }
+
+
 
 

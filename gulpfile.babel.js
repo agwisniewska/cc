@@ -1,7 +1,4 @@
-(() => {
-    'use strict';
-})();
-
+'use strict';
 import gulp from "gulp";
 import browserify from "browserify";
 import source from "vinyl-source-stream";
@@ -39,7 +36,7 @@ gulp.task('copy-otherHtml', () => {
 
 });
 
-gulp.task('fonts', function() {
+gulp.task('fonts', function () {
     return gulp.src('node_modules/font-awesome/fonts/**/*.*')
         .pipe(gulp.dest('dist/fonts'))
 });

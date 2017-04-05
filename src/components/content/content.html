@@ -1,16 +1,15 @@
 <div class="user-details"
-     ng-if="$ctrl.details.login != ''">
+     ng-if="$ctrl.details.login">
     <div class="row user-info">
         <div class="col-2 col-m-2 col-s-4 user-image">
             <img class="image"
-                 src={{$ctrl.details.avatar_url}}>
+                 src={{$ctrl.details.avatar_url}}/>
         </div>
         <div class="col-10 col-m-10 col-s-8">
             <div class="user-data">
                 <p class="user-login"> {{'@' + $ctrl.details.login}} </p>
                 <h1 class="user-name"> {{$ctrl.details.name}} </h1>
                 <p class="user-bio"> {{$ctrl.details.bio}} </p>
-
             </div>
         </div>
     </div>
@@ -30,7 +29,7 @@
 <div class="row">
     <div class="col-12 col-m-12 col-s-12">
         <div class="error"
-             ng-if="$ctrl.details.error != ''">{{ $ctrl.details.error }}
+             ng-if="$ctrl.details.error">{{ $ctrl.details.error }}
         </div>
     </div>
 </div>
