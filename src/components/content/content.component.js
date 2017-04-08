@@ -1,5 +1,5 @@
 export const Content =  {
-    templateUrl: '/views/content/content.html',
+    templateUrl: 'content/content.html',
     bindings: {
         details: '<',
         name: '<'
